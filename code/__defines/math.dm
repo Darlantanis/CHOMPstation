@@ -16,3 +16,17 @@
 #define FLOOR(x, y) ( round((x) / (y)) * (y) )
 // Check if a BYOND dir var is a cardinal direction (power of two)
 #define IS_CARDINAL(x) ((x & (x - 1)) == 0)
+
+// Tangent
+#define TAN(x) (sin(x) / cos(x))
+
+// Cotangent
+#define COT(x) (1 / TAN(x))
+
+// Secant
+#define SEC(x) (1 / cos(x))
+
+// Cosecant
+#define CSC(x) (1 / sin(x))
+
+#define ATAN2(x, y) ( !(x) && !(y) ? 0 : (y) >= 0 ? arccos((x) / sqrt((x)*(x) + (y)*(y))) : -arccos((x) / sqrt((x)*(x) + (y)*(y))) )
